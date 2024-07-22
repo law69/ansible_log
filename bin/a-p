@@ -13,8 +13,5 @@ __err () {
 
 pl="ansible-playbook ${arg}"
 
-#eval "ansible-playbook ${arg}" | tee tmp.tmp
-eval "ANSIBLE_CALLBACK_WHITELIST=json ANSIBLE_STDOUT_CALLBACK=json ansible-playbook ${arg}" | tee tmp_json.tmp
-
-
+eval "ansible-playbook ${arg}" | tee tmp_json.tmp
 
