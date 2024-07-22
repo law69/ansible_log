@@ -13,5 +13,7 @@ __err () {
 
 pl="ansible-playbook ${arg}"
 
-eval "ansible-playbook ${arg}" | tee tmp_json.tmp
+eval "ansible-playbook ${arg}" | tee ansible-playbook_$(date_start).log
+
+
 
